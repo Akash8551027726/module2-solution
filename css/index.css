@@ -1,1 +1,77 @@
-
+/* Base styles */
+* {
+ box-sizing: border-box;
+}
+body {
+ margin: 0;
+ padding: 20px;
+ font-family: Arial, sans-serif;
+}
+.section {
+ position: relative;
+ border: 1px solid black;
+ padding: 40px 20px 20px 20px; /* extra top padding to push content below the title */
+ margin-bottom: 20px;
+ background-color: #f0f0f0;
+ float: left;
+}
+.section-title {
+ position: absolute;
+ top: 0;
+ right: 0;
+ background-color: #e67e22;
+ border: 1px solid black;
+ padding: 5px 10px;
+ color: white;
+ font-weight: bold;
+}
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+ .section {
+   width: 33.33%;
+   margin-right: 1%;
+ }
+ .section:nth-child(3) {
+   margin-right: 0;
+ }
+}
+/* Tablet View (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+ .section {
+   width: 48%;
+   margin-right: 4%;
+ }
+ .section:nth-child(2) {
+   margin-right: 0;
+ }
+ .section:nth-child(3) {
+   width: 100%;
+   margin-top: 20px;
+ }
+}
+/* Mobile View (767px and below) */
+@media (max-width: 767px) {
+ .section {
+   width: 100%;
+   margin-right: 0;
+ }
+}
+/* Unique background colors per section */
+#chicken {
+ background-color: #ffefc2;
+}
+#chicken .section-title {
+ background-color: #e67e22;
+}
+#beef {
+ background-color: #ffe0e0;
+}
+#beef .section-title {
+ background-color: #c0392b;
+}
+#sushi {
+ background-color: #e0f7fa;
+}
+#sushi .section-title {
+ background-color: #16a085;
+}
