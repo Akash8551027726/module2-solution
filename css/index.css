@@ -41,6 +41,10 @@ body {
  background-color: #e67e22;
 }
 
+h2 {
+ text-align: center;
+}
+
 #beef {
  background-color: #ffe0e0;
 }
